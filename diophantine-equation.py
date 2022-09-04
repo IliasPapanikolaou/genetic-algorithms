@@ -89,7 +89,7 @@ while np.any(objective) != 0.:
             index_new_chromosome = index_new_chromosome + 1
         index_chromosome = index_chromosome + 1
 
-    print("Updated Population after Crossover")
+    print("Updated Population after Crossover:\n", chromosome)
 
     # Preparing for Mutation Operation
     a, b = chromosome.shape[0], chromosome.shape[1]
@@ -109,7 +109,7 @@ while np.any(objective) != 0.:
         col = a % 4
         chromosome[row, col] = replacing_num[i]
 
-    print("Updated Population after Mutation\n", chromosome)
+    print("Updated Population after Mutation:\n", chromosome)
     val1 = chromosome[0][0] + 2 * chromosome[0][1] + 3 * chromosome[0][2] + 4 * chromosome[0][3]
     val2 = chromosome[1][0] + 2 * chromosome[1][1] + 3 * chromosome[1][2] + 4 * chromosome[1][3]
     val3 = chromosome[2][0] + 2 * chromosome[2][1] + 3 * chromosome[2][2] + 4 * chromosome[2][3]
