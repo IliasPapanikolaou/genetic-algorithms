@@ -39,7 +39,7 @@ while np.any(objective) != 0.:
     fitness = 1 / (1 + objective)
     # Calculating the total of fitness function
     total = fitness.sum()
-    # Calculating the total of fitness function
+    # Calculating Probability for each chromosome
     prob = fitness / total
     # Selection using Roulette Wheel by Calculating Cumulative Probability
     cum_sum = np.cumsum(prob)
