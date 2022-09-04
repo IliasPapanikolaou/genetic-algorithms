@@ -1,6 +1,5 @@
 import numpy as np
 
-
 print("""
 Genetic Algorithm in Python for finding the Solution of 
 Linear Diophantine Equation a + 2b + 3c + 4d = 30. 
@@ -20,7 +19,7 @@ The stages are:
 # Random Initialization of Chromosome Population ('n' is the number of chromosomes in the population)
 n = 6
 chromosome = np.random.randint(1, 9, (n, 4))
-print("Random Initial Population:")
+print("Random Initial Population:\n", chromosome)
 
 # Calculation of the Objective function for fitness
 epoch = 1
@@ -126,28 +125,24 @@ while np.any(objective) != 0.:
 if val1 == 30:
     print("Total Generations: ", epoch)
     print("One of the Possible Solutions is: ", chromosome[0])
-    print("After substitution of above alleles,the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
+    print("After substitution of above alleles, the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
           int(chromosome[0][0]), "+ ( 2 *", int(chromosome[0][1]), ") + ( 3 *", int(chromosome[0][2]), ") + ( 4 *",
           int(chromosome[0][3]), ") = ", val1)
-else:
-    if val2 == 30:
-        print("Total Generations : ", epoch)
-        print("One of the Possible Solutions is : ", chromosome[1])
-        print(
-            "After substitution of above alleles,the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
-            int(chromosome[1][0]), "+ ( 2 *", int(chromosome[1][1]), ") + ( 3 *", int(chromosome[1][2]), ") + ( 4 *",
-            int(chromosome[1][3]), ") = ", val2)
-    else:
-        val3 = chromosome[2][0] + 2 * chromosome[2][1] + 3 * chromosome[2][2] + 4 * chromosome[2][3]
-        print("Total Generations : ", epoch)
-        print("One of the Possible Solutions is : ", chromosome[2])
-        print(
-            "After substitution of above alleles,the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
-            int(chromosome[2][0]), "+ ( 2 *", int(chromosome[2][1]), ") + ( 3 *", int(chromosome[2][2]), ") + ( 4 *",
-            int(chromosome[2][3]), ") = ", val3)
+if val2 == 30:
+    print("Total Generations : ", epoch)
+    print("One of the Possible Solutions is : ", chromosome[1])
+    print("After substitution of above alleles, the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
+          int(chromosome[1][0]), "+ ( 2 *", int(chromosome[1][1]), ") + ( 3 *", int(chromosome[1][2]), ") + ( 4 *",
+          int(chromosome[1][3]), ") = ", val2)
+if val3 == 30:
+    print("Total Generations : ", epoch)
+    print("One of the Possible Solutions is : ", chromosome[2])
+    print("After substitution of above alleles, the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
+          int(chromosome[2][0]), "+ ( 2 *", int(chromosome[2][1]), ") + ( 3 *", int(chromosome[2][2]), ") + ( 4 *",
+          int(chromosome[2][3]), ") = ", val3)
 if val4 == 30:
     print("Total Generations : ", epoch)
     print("One of the Possible Solutions is : ", chromosome[3])
-    print("After substitution of above alleles,the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
+    print("After substitution of above alleles, the Diophantine Equation { a + 2*b + 3*c + 4*d } is satisfied as::\n",
           int(chromosome[3][0]), "+ ( 2 *", int(chromosome[3][1]), ") + ( 3 *", int(chromosome[3][2]), ") + ( 4 *",
           int(chromosome[3][3]), ') = ', val4)
